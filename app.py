@@ -11,10 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set the OpenAI API key from the environment variable
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-if openai.api_key is None:
-    raise ValueError("The OPENAI_API_KEY environment variable is not set")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # ChatOpenAI Templates
 system_template = """You are a helpful assistant who always speaks in a pleasant tone!

@@ -8,7 +8,6 @@ from chainlit.prompt import Prompt, PromptMessage  # importing prompt tools
 from chainlit.playground.providers import ChatOpenAI  # importing ChatOpenAI tools
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 # ChatOpenAI Templates

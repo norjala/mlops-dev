@@ -8,24 +8,14 @@ from chainlit.prompt import Prompt, PromptMessage  # importing prompt tools
 from chainlit.playground.providers import ChatOpenAI  # importing ChatOpenAI tools
 from dotenv import load_dotenv
 
-# Fetch the OpenAI API key from the environment variable
-api_key = os.getenv("OPENAI_API_KEY")
-
-# Debugging: Print to check if the environment variable is being read
-print(f"OPENAI_API_KEY: {api_key}")
-
-if api_key is None:
-    raise ValueError("The OPENAI_API_KEY environment variable is not set")
-
-# Set the OpenAI API key for the OpenAI client
-openai.api_key = api_key
+load_dotenv()
 
 # ChatOpenAI Templates
 system_template = """You are a helpful assistant who always speaks in a pleasant tone!
 """
 
 user_template = """{input}
-Think through your response step by step.
+Think through your response step by step...
 """
 
 
